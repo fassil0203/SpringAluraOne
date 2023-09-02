@@ -1,4 +1,4 @@
-package med.voll.api.endereco;
+package med.voll.api.Endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,7 @@ import med.voll.api.medico.DadosEndereco;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Endereco {
+public class endereco {
 
     private String logradouro;
     private String bairro;
@@ -21,7 +21,7 @@ public class Endereco {
     private String cidade;
     private String uf;
 
-    public Endereco(DadosEndereco dados) {
+    public endereco(DadosEndereco dados) {
         this.logradouro = dados.logradouro();
         this.bairro = dados.bairro();
         this.cep = dados.cep();
