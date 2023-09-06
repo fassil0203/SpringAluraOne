@@ -8,8 +8,7 @@ public record DadosDetalhamentoMedico(
         String email,
         String crm,
         String telefone,
-        Especialidade especialidade,
-        endereco Endereco endereco) {
+        Especialidade especialidade) {
 
     public DadosDetalhamentoMedico(Medico medico){
 
@@ -19,8 +18,7 @@ public record DadosDetalhamentoMedico(
                 medico.getEmail(),
                 medico.getCrm(),
                 medico.getTelefone(),
-                medico.getEspecialidade(),
-                medico.getEndereco());
+                medico.getEspecialidade());
 
     }
         }
