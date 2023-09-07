@@ -1,10 +1,11 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.domain.Endereco.endereco;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
@@ -27,7 +28,7 @@ public class Medico {
     private Especialidade especialidade;
 
     @Embedded
-    private med.voll.api.Endereco.endereco endereco;
+    private med.voll.api.domain.Endereco.endereco endereco;
 
     private Boolean ativo;
 
@@ -39,7 +40,7 @@ public class Medico {
         this.telefone =
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
-        this.endereco = new med.voll.api.Endereco.endereco(dados.endereco());
+        this.endereco = new endereco(dados.endereco());
     }
 
     public void atualizarinformacoes(DadosAtualizacaoMedico dados) {

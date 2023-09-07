@@ -1,6 +1,4 @@
-package med.voll.api.medico;
-
-import med.voll.api.Endereco.endereco;
+package med.voll.api.domain.medico;
 
 public record DadosDetalhamentoMedico(
         Long id,
